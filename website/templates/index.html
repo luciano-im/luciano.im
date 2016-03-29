@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Luciano Muñoz - Designer + Developer</title>
+
+	{% load static from staticfiles %}
+	
+	<link rel="stylesheet" href="{% static "css/normalize.css" %}">
+	<link rel="stylesheet" href="{% static "css/styles.css" %}">
+</head>
+<body>
+	<section id="home">
+		<div id="home-bkg" class="dots">
+			<div id="home-content">
+				<img src="{% static "img/yo.jpg" %}" alt="Luciano Muñoz">
+				<span class="copy">Hola! Soy Luciano Muñoz</span>
+				<span class="azul">DESIGNER</span><span>+</span><span class="azul">DEVELOPER</span>
+				<span class="copy2">...creating good things on the web</span>
+				<i class="fa fa-heart fa-lg pink home-heart"></i>
+			</div>
+		</div>
+	</section>
+	<header class="pink-bkg">
+		<div class="logo-nav">
+			<div>
+				<span>LUCIANO</span><span class="azul">+</span><span>MUÑOZ</span>
+			</div>
+		</div><!--
+		--><nav>
+			<ul>
+				<li class="hola"><a href="#about">HOLA!</a><span class="underline"></span></li><!--
+				--><li class="hago"><a href="#services">QUE HAGO?</a><span class="underline"></span></li><!--
+				--><li class="portfolio"><a href="#portfolio">PORTFOLIO</a><span class="underline"></span></li><!--
+				--><li class="contacto"><a href="#map-contact">CONTACTO</a><span class="underline"></span></li>
+			</ul>
+		</nav><!--
+		--><ul id="contact-data">
+			<li>hola@luciano.im</li>
+			<li>|</li>
+			<li>(02478) 507551</li>
+		</ul>
+	</header>
+	<section id="about" class="serif-italic">
+		<p>Soy <span class="pink">Luciano Muñoz</span>, diseñador y desarrollador web freelance apasionado por transformar ideas en experiencias digitales.</p>
+		<p>Primero ESCUCHAR, después IDEAR y CREAR.</p>
+		<p>Un proyecto que ataca un problema equivocado esta destinado a fracasar, de ahí que escuchar al cliente y detectar correctamente sus necesidades se ha vuelto una parte fundamental en el proceso creativo.</p>
+		<a href="#portfolio" class="more-btn">MIS TRABAJOS</a>
+	</section>
+	<section id="services">
+		<h2 class="title">QUE HAGO?</h2>
+		<span class="title-underline pink-bkg"></span>
+		<div class="service">
+			<img src="{% static "img/backend.png" %}" alt="Backend">
+			<!--<i class="icon-cog icon-large pink"></i>-->
+			<h3 class="title-service">DESARROLLO BACKEND</h3>
+			<p class="serif-italic">Creo sitios de fácil administración, estables y de carga veloz; gracias a tecnologías tan pro como el lenguaje Python y su framework web Django.</p>
+		</div><!--
+		--><div class="service">
+			<img src="{% static "img/frontend.png" %}" alt="Frontend">
+			<!--<i class="icon-magic icon-large pink"></i>-->
+			<h3 class="title-service">DESARROLLO FRONTEND</h3>
+			<p class="serif-italic">Desarrollo interfaces ágiles a las interacciones del usuario, y adaptables a cualquier pantalla y resolución, utilizando puro CSS3, JavaScript y HTML5.</p>
+		</div><!--
+		--><div class="service">
+			<img src="{% static "img/design.png" %}" alt="Design">
+			<h3 class="title-service">DISEÑO</h3>
+			<p class="serif-italic">Mis diseños ponen un enfoque especial en la usabilidad, ofreciendo una experiencia de calidad sin importar el medio de visualización.</p>
+		</div>
+	</section>
+	<section id="portfolio">
+		<h2 class="title">PORTFOLIO</h2>
+		<span class="title-underline pink-bkg"></span>
+		<span class="subtitle">MIS TRABAJOS SON MI MEJOR CURRICULUM, Y ACÁ TE LOS MUESTRO</span>
+		<div>
+			<figure class="work">
+				<img class="work-thumb-over" src="{% static "img/leiva.png" %}" alt="Leiva Equipamientos">
+				<figcaption>
+					<div class="work-data">
+						<h4><a href="http://www.leivaequipamientos.com.ar">LEIVA EQUIPAMIENTOS</a></h4>
+						<em class="serif-italic">Diseño y Desarrollo web</em>
+						<a href="http://www.leivaequipamientos.com.ar" class="view-work">VER PROYECTO</a>
+					</div>
+				</figcaption>
+			</figure><!--
+			--><figure class="work">
+				<img class="work-thumb-over" src="{% static "img/sueños.png" %}" alt="Sueños Wellness">
+				<figcaption>
+					<div class="work-data">
+						<h4><a href="http://luchisds.github.com">SUEÑOS WELLNESS</a></h4>
+						<em class="serif-italic">Desarrollo web</em>
+						<a href="http://luchisds.github.com" class="view-work">VER PROYECTO</a>
+					</div>
+				</figcaption>
+			</figure>
+		</div>
+		<p>Proximamente estaré subiendo más trabajos.</p>
+		<!-- <a href="#" class="more-btn">VER MAS</a> -->
+	</section>
+	<section id="map-contact">
+		<h2 class="title">CONTACTO</h2>
+		<span class="title-underline pink-bkg"></span>
+		<span class="subtitle">PARA QUE SEPAS DONDE ENCONTRARME</span>
+		<article>
+			<img src="{% static "img/direction.jpg" %}" alt="">
+			<div>
+				<h3 class="pink">Luciano Muñoz</h3>
+				<p><span class="title azul">Tel_</span> +54 (02478) 507551</p>
+				<p><span class="title azul">Email_</span> <a href="mailto:hola@luciano.im" class="email">hola@luciano.im</a></p>
+				<ul id="social">
+					<li><a class="pink" href="http://www.twitter.com/luciano_sds" title="Twitter"><i class="fa fa-twitter"></i></a></li><!--
+					--><li><a class="pink" href="http://www.facebook.com/luciano.munoz.3154" title="Facebook"><i class="fa fa-facebook"></i></a></li><!--
+					--><li><a class="pink" href="http://www.instagram.com/luciano_sds/" title="Instagram"><i class="fa fa-instagram"></i></a></li><!--
+					--><li><a class="pink" href="https://ar.linkedin.com/in/luciano-muñoz-94b7a19b" title="LinkedIn"><i class="fa fa-linkedin"></i></a></li><!--
+					--><li><a class="pink" href="https://github.com/luchisds" title="GitHub"><i class="fa fa-github-alt"></i></a></li>
+				</ul>
+			</div>
+		</article>
+		<div id="map"></div>
+	</section>
+	<section id="contact">
+		<div>
+			<p>¡ Me interesa saber</p>
+			<p>que tenes para decirme !</p>
+			<a id="contact-show" href="" class="more-btn">TE ESCUCHO!</a>
+		</div>
+	</section>
+	<footer>
+		© 2016, by Luciano Muñoz.
+	</footer>
+	<form id="contact-form" action="" method="post">
+		{% csrf_token %}
+		<a href="#" class="close"><i class="fa fa-chevron-up"></i></a>
+		<h2 class="logo"><span>LUCIANO</span><span class="azul">+</span><span>MUÑOZ</span></h2>
+		<h2>¡Soy todo oidos!</h2>
+		<label for="email">Email</label>
+		{{ form.email }}
+		<label for="subject">Asunto</label>
+		{{ form.subject }}
+		<label for="message">Mensaje</label>
+		{{ form.message }}
+		<button class="more-btn" data-action="send">Enviar</button>
+	</form>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script src='https://api.tiles.mapbox.com/mapbox.js/v2.1.9/mapbox.js'></script>
+	<link href='https://api.tiles.mapbox.com/mapbox.js/v2.1.9/mapbox.css' rel='stylesheet' />
+	<script>
+		L.mapbox.accessToken = 'pk.eyJ1IjoibHVjaGlzZHMiLCJhIjoiVkNPam1nTSJ9.xmW7X9AcRugB2l_V6A5gUA';
+		var map = L.mapbox.map('map', 'luchisds.maa5ef16'/*, {zoomControl: false}*/).setView([-34.0570, -60.1003], 14);
+
+		// Disable drag and zoom handlers.
+		//map.dragging.disable();
+		map.touchZoom.disable();
+		//map.doubleClickZoom.disable();
+		map.scrollWheelZoom.disable();
+		// Disable tap handler, if present.
+		if (map.tap) map.tap.disable();
+
+		var marker = L.mapbox.featureLayer({
+			type: 'Feature',
+			geometry: {
+				type: 'Point',
+				// coordinates here are in longitude, latitude order because
+				// x, y is the standard for GeoJSON and many formats
+				coordinates: [
+					-60.1003,
+					-34.0552
+				]
+			},
+			properties: {
+				title: '<span style="color:#EE3D46; font-size:1.1em;">Pedro Lombardo Nº 2</span>',
+				description: 'Arrecifes, Buenos Aires, ARG',
+				'marker-size': 'medium',
+				'marker-color': '#EE3D46',
+				'marker-symbol': 'circle'
+			}
+		}).addTo(map);
+
+		marker.eachLayer(function(m) {
+			m.openPopup();
+		});
+	</script>
+
+	<link href="{% static "css/font-awesome/css/font-awesome.min.css" %}" rel="stylesheet">
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:700,800,400' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=PT+Serif:400italic' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Biryani:600,800' rel='stylesheet' type='text/css'>
+
+	<script src="{% static "js/jquery.mousewheel.min.js" %}"></script>
+	<script src="{% static "js/jquery.scrollTo.min.js" %}"></script>
+	<script src="{% static "js/js.js" %}"></script>
+</body>
+</html>

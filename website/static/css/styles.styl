@@ -1,0 +1,672 @@
+html, body
+  color #868686
+  font normal 16px 'Open Sans', sans-serif
+  height 100%
+  margin 0
+  padding 0
+  position relative
+  width 100%
+  +below(450px)
+    font normal 14px 'Open Sans', sans-serif
+
+footer
+  background-color white
+  color black
+  font-size .7em
+  padding 1em 0 .5em 0
+  text-align center
+
+header
+  height 50px
+  +below(635px)
+    height 90px
+  &.fixed
+    & + section
+      margin-top 50px
+      +below(635px)
+        margin-top 90px
+
+section
+  background-color white
+  position relative
+  &:not(#home):not(#about):not(#map-contact):not(#contact)
+    padding 3.5% 2%
+  &:not(#about)
+    .title
+      margin-bottom 0
+
+label
+  display block
+  line-height 1em
+
+li
+  display inline-block
+  list-style none
+
+nav
+  display inline-block
+  text-align center
+  margin-left 3%
+  height 50px
+  vertical-align top
+  +below(785px)
+      float right
+  +below(635px)
+    margin 0
+    width 100%
+  ul
+    color white
+    font-size .9em
+    position relative
+    top 50%
+    transform translateY(-50%) !important
+  li
+    margin 0 .9em
+    +below(635px)
+      margin 0
+      width 25%
+    .underline
+      display block
+      height 2px
+      margin 5px auto 0 auto
+      width 20px
+    &.active
+      .underline
+        background-color white
+  a
+    color white
+    text-decoration none
+    transition .3s all ease-in-out
+    -webkit-transition .3s all ease-in-out
+    &:hover
+      color #555
+
+ul
+  margin 0
+  padding 0
+
+#about
+  padding 5% 5% 3% 5% !important
+  text-align center
+  p
+    font-size 1.1em
+    line-height 1.9em
+    margin 0
+    +below(635px)
+      font-size 1em
+
+// #blog
+//   text-align center
+//   article
+//     display inline-block
+//     margin 1%
+//     max-width 370px
+//     vertical-align top
+//     width 33%
+//     &:hover
+//       .post-info
+//         opacity 1
+//         margin-top 0
+//       .post-link
+//         left 0
+//         right 0
+//         visibility visible
+//       .post-thumb-over
+//         opacity 1
+//   .fa-heart
+//     font-size 3em
+//     line-height 1.4em
+
+#contact
+  background url('../img/bsas.jpg') no-repeat
+  background-attachment fixed !important
+  background-size cover !important
+  background-position center 20%
+  color white
+  min-height 30%
+  padding 5% 0
+  position relative
+  text-align center
+  width 100%
+  z-index 1000
+  +below(635px)
+    min-height 15%
+  &:after
+    background-color #EE3D46
+    background-image url('../img/background_section.png')
+    bottom 0
+    content ''
+    left 0
+    opacity .8
+    position absolute
+    right 0
+    top 0
+  div
+    position relative
+    z-index 100
+    p
+      font-size 2.5em
+      line-height 1.5em
+      margin 0
+      font-family 'Biryani', sans-serif
+      font-weight 800
+      +below(635px)
+        font-size 1.8em
+
+#contact-data
+  display inline-block
+  float right
+  text-align right
+  position relative
+  top 50%
+  transform translateY(-50%) !important
+  margin-right 20px
+  li
+    color white
+    font-size 1em
+    margin 0 .4em
+    +below(975px)
+      display block
+      font-size .9em
+      &:nth-child(2)
+        display none
+    +below(785px)
+      display none
+
+#contact-form
+  background-color rgba(70,70,70,.98)
+  background-image url('../img/background_section.png')
+  color white
+  font-family 'Biryani', sans-serif
+  font-size 1em
+  font-weight 800
+  height 100%
+  left 0
+  padding 1em 8%
+  position fixed
+  top 0
+  transform translateY(-100%)
+  transition all 350ms cubic-bezier(.645,.045,.355,1)
+  webkit-transform translateY(-100%)
+  -webkit-transition all 350ms cubic-bezier(.645,.045,.355,1)
+  visibility hidden
+  width 84%
+  z-index 20000 !important
+  +below(635px)
+    font-size .8em
+    padding 1em 5%
+    width 90%
+  h2
+    &:nth-child(3)
+      font-size 3em
+      margin 0 0 .2em 0
+      +below(635px)
+        font-size 2.5em
+  label
+    font-size 2em
+  textarea
+    height 100px
+  .logo
+    border none
+    font-size 1.5em
+    margin 0 0 .5em 0
+  .more-btn
+    margin-top 1em
+
+#contact-form input,
+#contact-form textarea
+  background-color transparent
+  border none
+  color #EE3D46
+  display block
+  font-size 1.5em
+  font-weight 600
+  margin-bottom 1em
+  outline none
+  width 100%
+
+#contact-form .close,
+#contact-form .close i
+  color #EE3D46
+  display inline-block
+  height 30px
+  position absolute
+  width 30px
+  right 2%
+
+#home
+  height 100%
+  left 0
+  position relative
+  top 0
+  width 100%
+  z-index -1000
+
+#home-bkg
+  background url('../img/home.jpg') no-repeat
+  background-attachment fixed
+  background-size cover
+  background-position 50% 50%
+  height 100%
+  position fixed
+  left 0
+  top 0
+  width 100%
+  z-index -1
+  -webkit-filter opacity(1) greyscale(0.75)
+  &:before
+    z-index 0
+    content ""
+    position absolute
+    top 0
+    left 0
+    right 0
+    width 100%
+    height 100%
+    -webkit-transition opacity 350ms
+    background url('../img/bck.dots.png') repeat top left
+
+#home-content
+  position absolute
+  text-align center
+  font-size 1em
+  top 50%
+  width 100%
+  transform translateY(-50%) !important
+  -webkit-transform translateY(-50%) !important
+  +below(635px)
+    font-size .8em
+  +below(530px)
+    font-size .65em
+  img
+    border 5px solid white
+    max-width 140px
+    border-radius 50%
+    opacity .8
+  span
+    &.copy
+      display block
+      color white
+      font-size 3em
+      font-weight bold
+      margin-top .3em
+    &.azul
+      display inline-block
+      font-weight lighter
+      font-size 2.5em
+      & + span
+        color white
+        margin 0 .5em
+        font-size 2em
+    &.copy2
+      display block
+      font-size 1.7em !important
+  .home-heart
+    display block
+    left 0
+    right 0
+    margin-top 2em
+
+#map
+  bottom 0
+  height 400px
+  margin 0
+  position relative
+  top 0
+  width 100%
+
+#map-contact
+  text-align center
+  padding 3.5% 0 0 0
+  article
+    padding 0 3em 3em 3em
+    text-align center
+    img
+      margin-right 5em
+      +below(635px)
+        margin-right 3em
+      +below(450px)
+        height auto
+        margin 0 0 1.5em 0
+        width 100px
+    div
+      +below(450px)
+        display block !important
+        text-align center !important
+      h3
+        margin 0 0 .5em 0
+      p
+        margin 4px 0
+    .title
+      font-size 1em
+  .email
+    color #868686
+    text-decoration none
+    &:hover
+      color #EE3D46
+
+#map-contact article img,
+#map-contact article div
+  display inline-block
+  text-align left
+  vertical-align middle
+
+#portfolio
+  background-color #EEE
+  text-align center
+
+#services
+  text-align center
+
+#social
+  display inline-block
+  position relative
+  a
+    background-color white
+    border-bottom 2px solid transparent
+    display block
+    height 32px
+    line-height 32px
+    text-align center
+    text-decoration none
+    width 32px
+    &:hover
+      border-bottom 2px solid #EE3D46
+  li
+    border-bottom 2px solid transparent
+    margin 0 .1em
+
+.about-images
+  margin-top 1.8em
+  text-align center
+
+.azul
+  color #3FA9F5 !important
+
+.contact-show
+  transform translateY(0%) !important
+  -webkit-transform translateY(0%) !important
+  visibility visible !important
+
+.fixed
+  position fixed
+  top 0
+  width 100%
+  z-index 10000
+
+.logo-nav
+  display inline-block
+  font-size 1.3em
+  font-weight bold
+  height 40px
+  margin 5px 0 0 -8px
+  min-width 230px
+  padding 0 auto 0 auto
+  transform skewX(-20deg)
+  width 25%
+  +below(635px)
+    margin 0
+    transform skewX(0deg)
+    width 100%
+  div
+    position relative
+    top 50%
+    text-align center
+    transform translateY(-50%) !important
+  span
+    color white
+    display inline-block
+    transform skewX(20deg) !important
+    +below(635px)
+      transform skewX(0deg) !important
+    &.azul
+      margin 0 5px
+  &:before
+    z-index 0
+    content ""
+    position absolute
+    top 0
+    left 0
+    right 0
+    width 100%
+    height 100%
+    -webkit-transition opacity 350ms
+    background url('../img/bck.dots.png') repeat top left
+    opacity .6
+
+.more-btn
+  background-color white
+  border 1px solid #EE3D46
+  color #EE3D46
+  display inline-block
+  font normal 1em 'Open Sans', sans-serif
+  margin-top 2.5em
+  padding .5em 2em
+  text-decoration none
+  transition .1s all ease-in-out
+  -webkit-transition .1s all ease-in-out
+  +below(635px)
+    margin-top 1.8em
+    padding .5em 1.5em
+  &:hover
+    background-color #EE3D46
+    box-shadow inset 0 0 0 3px white
+    color white
+
+.pink
+  color #EE3D46
+
+.pink-bkg
+  background #EE3D46
+
+// .post-header
+//   max-height 373px
+//   position relative
+//   z-index 9998
+
+// .post-info
+//   color white
+//   font-size .9em
+//   height 3.5em
+//   margin-top -3.5em
+//   opacity 0
+//   position relative
+//   transition .5s all ease-in-out
+//   -webkit-transition .5s all ease-in-out
+//   z-index 9999
+//   i
+//     margin-right .2em
+//   span
+//     line-height 3.5em
+//     & > .fa-comment
+//       margin-left 2em
+
+// .post-link
+//   display block
+//   position absolute
+//   margin auto
+//   top 0
+//   bottom 0
+//   max-height 64px
+//   left -2em
+//   right 2em
+//   text-decoration none
+//   transition .5s all ease-in-out
+//   -webkit-transition .5s all ease-in-out
+//   visibility hidden
+//   img
+//     bottom 0
+//     left 0
+//     margin auto
+//     position absolute
+//     right 0
+//     top 0
+
+// .post-slug
+//   line-height 1.8em
+
+// .post-thumb-over
+//   height 100%
+//   background-color rgba(242,242,242,.8)
+//   opacity 0
+//   position absolute
+//   top 0
+//   transition .5s all ease
+//   -webkit-transition .5s all ease
+//   width 100%
+//   &:before
+//     content ''
+//     display inline-block
+//     height 100%
+//     margin-right -0.25em
+//     vertical-align middle
+
+// .post-title
+//   border-bottom 1px solid #DDD
+//   font-size 1.4em
+//   font-weight normal
+//   margin 1em 0 0 0
+//   padding-bottom 1em
+
+.row
+  left 50%
+  position absolute
+  width 50%
+  & > div
+    padding 1.5% 5%
+
+.serif-italic
+  font-family 'PT Serif', serif
+  font-style italic
+
+.service
+  border-top 1px solid #EE3D46
+  box-sizing border-box
+  display inline-block
+  margin-top 2.8em
+  vertical-align top
+  padding 2% 2% 0 2%
+  position relative
+  text-align center
+  width 33%
+  +below(635px)
+    display block
+    width 100%
+  img
+    background-color white
+    display block
+    height auto
+    left 0
+    margin -22px auto 0 auto
+    padding 0 5%
+    position absolute
+    right 0
+    top 0
+    max-width 44px
+    +below(635px)
+      height auto
+      width 38px
+      margin-top -19px
+    +below(450px)
+      height auto
+      width 30px
+      margin-top -15px
+  p
+    line-height 1.8em
+
+.subtitle
+  display block
+  font-size .9em
+  margin 1.2em 0 3.5em 0
+  // +below(450px)
+  //   margin .8em 0 2em 0
+
+.title
+  font-size 1.8em
+
+.title-service
+  font-weight normal
+
+.title-underline
+  display block
+  height 6px
+  margin 0 auto
+  width 30px
+
+.view-work
+  border 1px solid white
+  color white
+  display inline-block
+  margin-top 2.5em
+  padding .6em 1em
+  text-decoration none
+  transition .3s all ease-in-out
+  -webkit-transition .3s all ease-in-out
+  &:hover
+    background-color rgba(255,255,255,.7)
+    border 1px solid #EE3D46
+    color #EE3D46
+
+.work
+  color white
+  display inline-block
+  max-height 370px
+  margin 0
+  overflow hidden
+  position relative
+  /*+below(450px)
+    width 100%*/
+  em
+    display block
+    font-size 1.1em
+    +below(1024)
+      font-size 1em
+  figcaption
+    background-color rgba(238,61,70,.8)
+    height 100%
+    left 0
+    max-height 370px
+    opacity 0
+    position absolute
+    text-align center
+    bottom 0
+    transition .5s all ease
+    -webkit-transition .5s all ease
+    vertical-align middle
+    width 100%
+    +below(1024px)
+      bottom 0
+      height 55px
+      opacity 1
+      padding-left .5em
+      text-align left
+      .view-work
+        display none
+    &:before
+      content ''
+      display inline-block
+      height 100%
+      margin-right -0.25em
+      vertical-align middle
+  h4
+    font-size 1.5em
+    margin 0 0 .3em 0
+    +below(1024px)
+      margin -5px 0 0 0
+    a
+      color white
+      text-decoration none
+      +below(1024px)
+        font-size .9em
+        margin 0
+  img
+    height auto
+    width 100%
+  &:hover
+    figcaption
+      opacity 1
+
+.work-data
+  display inline-block
+  vertical-align middle
+
