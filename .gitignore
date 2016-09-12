@@ -1,3 +1,6 @@
+#Local directory
+staticfiles/
+
 #Django key
 secret_key.txt
 
