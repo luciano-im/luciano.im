@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #Local directory
 staticfiles/
 
@@ -9,3 +10,62 @@ secret_key.txt
 
 #Django files
 *.py[cod]
+=======
+# Compiled source #
+###################
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+ 
+# Packages #
+############
+# it's better to unpack these files and commit the raw source
+# git has its own built in compression methods
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+ 
+# Logs and databases #
+######################
+*.log
+*.sql
+*.sqlite
+*.db
+*.sqlite3
+
+# Imagenes #
+#############
+*.pdf
+*.psd
+ 
+# OS generated files #
+#####################
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Python #
+###########
+*.pyc
+settings.py
+
+# Sublime Text #
+###########
+*.sublime-project
+*.sublime-workspace
+
+# Directory #
+###########
+>>>>>>> d5740049f3fd2afc9fc5d76edfbee41fa081ab75
