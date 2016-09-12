@@ -18,12 +18,14 @@ footer
 
 header
   height 50px
-  +below(635px)
+  //+below(635px)
+  +below(705px)
     height 90px
   &.fixed
     & + section
       margin-top 50px
-      +below(635px)
+      //+below(635px)
+      +below(705px)
         margin-top 90px
 
 section
@@ -51,7 +53,8 @@ nav
   vertical-align top
   +below(785px)
       float right
-  +below(635px)
+  //+below(635px)
+  +below(705px)
     margin 0
     width 100%
   ul
@@ -62,9 +65,19 @@ nav
     transform translateY(-50%) !important
   li
     margin 0 .9em
-    +below(635px)
+    //+below(635px)
+    +below(705px)
       margin 0
-      width 25%
+      width 20%
+    +below(390px)
+      &:not(.hola)
+        width 23%
+      &.hola
+        width 8%
+        span.h
+          display none
+        span.house
+          display inline-block !important
     .underline
       display block
       height 2px
@@ -404,7 +417,8 @@ ul
   padding 0 auto 0 auto
   transform skewX(-20deg)
   width 25%
-  +below(635px)
+  //+below(635px)
+  +below(705px)
     margin 0
     transform skewX(0deg)
     width 100%
@@ -417,7 +431,8 @@ ul
     color white
     display inline-block
     transform skewX(20deg) !important
-    +below(635px)
+    //+below(635px)
+    +below(705px)
       transform skewX(0deg) !important
     &.azul
       margin 0 5px

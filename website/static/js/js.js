@@ -20,7 +20,7 @@ $(document).ready(function() {
 	});
 
 	//Navegacion del elemento NAV
-	$('nav li a').click(function(event) {
+	$('nav li:not(.blog) a').click(function(event) {
 		event.preventDefault();
 		event.stopPropagation();
 		var headerHeight = $('header').height();

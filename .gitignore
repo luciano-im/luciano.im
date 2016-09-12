@@ -1,0 +1,8 @@
+#Django key
+secret_key.txt
+
+#OSX files
+.DS_Store
+
+#Django files
+*.py[cod]
