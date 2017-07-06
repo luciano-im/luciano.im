@@ -4,7 +4,6 @@ node_modules/
 # Staticfiles & mediafiles
 staticfiles/
 mediafiles/
-static/
 env/
 
 # Secret Key
