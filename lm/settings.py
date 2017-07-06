@@ -1,3 +1,5 @@
+#-*- coding: utf-8 -*-
+
 """
 Django settings for lm project.
 
@@ -26,7 +28,10 @@ with open(BASE_DIR+'/lm/secret_key.txt') as f:
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost',]
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost','luciano.im']
+
+ADMINS = [('Luciano Muñoz', 'hola@luciano.im'),]
+MANAGERS = [('Luciano Muñoz', 'hola@luciano.im'),]
 
 
 # Application definition
@@ -131,9 +136,16 @@ STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
 )
 
-#Email settings
-EMAIL_USE_TLS = True
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'luchisds@gmail.com'
-EMAIL_HOST_PASSWORD = 'lavarden2011'
-EMAIL_PORT = 587
+# EMAIL Configuration
+with open(BASE_DIR+'/lm/email_account.txt') as f:
+    ea = f.read().strip().split(':')
+    EMAIL_USE_TLS = True
+    EMAIL_HOST = ea[0]
+    EMAIL_HOST_PASSWORD = ea[3]
+    EMAIL_HOST_USER = ea[2]
+    EMAIL_PORT = ea[1]
+
+# Security Settings
+SECURE_CONTENT_TYPE_NOSNIFF = True
+SECURE_BROWSER_XSS_FILTER = True
+X_FRAME_OPTIONS = 'DENY'

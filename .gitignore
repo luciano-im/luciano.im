@@ -1,16 +1,29 @@
-<<<<<<< HEAD
-#Local directory
-staticfiles/
+#Node Modules
+node_modules/
 
-#Django key
+# Staticfiles & mediafiles
+staticfiles/
+mediafiles/
+static/
+env/
+
+# Secret Key
 secret_key.txt
+
+# Remote Server
+remote_server.txt
+
+# Email account
+email_account.txt
 
 #OSX files
 .DS_Store
 
-#Django files
+# Byte-compiled / optimized / DLL files
+__pycache__/
 *.py[cod]
-=======
+*$py.class
+
 # Compiled source #
 ###################
 *.com
@@ -56,11 +69,6 @@ secret_key.txt
 ehthumbs.db
 Thumbs.db
 
-# Python #
-###########
-*.pyc
-settings.py
-
 # Sublime Text #
 ###########
 *.sublime-project
@@ -68,4 +76,3 @@ settings.py
 
 # Directory #
 ###########
->>>>>>> d5740049f3fd2afc9fc5d76edfbee41fa081ab75
