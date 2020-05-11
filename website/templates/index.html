@@ -6,9 +6,18 @@
 	<title>Luciano Muñoz - Designer + Developer</title>
 
 	{% load static from staticfiles %}
-	
+
 	<link rel="stylesheet" href="{% static "css/normalize.css" %}">
 	<link rel="stylesheet" href="{% static "css/styles.css" %}">
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-75822816-2"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-75822816-2');
+	</script>
 </head>
 <body>
 	<section id="home">
@@ -76,6 +85,26 @@
 		<span class="subtitle">MIS TRABAJOS SON MI MEJOR CURRICULUM, Y ACÁ TE LOS MUESTRO</span>
 		<div>
 			<figure class="work">
+				<img class="work-thumb-over" src="{% static "img/elpibe.jpg" %}" alt="El Pibe de la Cámara">
+				<figcaption>
+					<div class="work-data">
+						<h4><a href="http://www.elpibedelacamara.com/">EL PIBE DE LA CÁMARA</a></h4>
+						<em class="serif-italic">Diseño y Desarrollo web</em>
+						<a href="http://www.elpibedelacamara.com/" class="view-work">VER PROYECTO</a>
+					</div>
+				</figcaption>
+			</figure><!--
+			--><figure class="work">
+				<img class="work-thumb-over" src="{% static "img/nius.jpg" %}" alt="Nius">
+				<figcaption>
+					<div class="work-data">
+						<h4><a href="https://luchisds.github.io/nius/">NIUS</a></h4>
+						<em class="serif-italic">Desarrollo React.js</em>
+						<a href="https://luchisds.github.io/nius/" class="view-work">VER PROYECTO</a>
+					</div>
+				</figcaption>
+			</figure><!--
+			--><figure class="work">
 				<img class="work-thumb-over" src="{% static "img/bh.jpg" %}" alt="Buratovich Hnos.">
 				<figcaption>
 					<div class="work-data">
@@ -140,9 +169,9 @@
 				<p><span class="title azul">Tel_</span> +54 (02478) 507551</p>
 				<p><span class="title azul">Email_</span> <a href="mailto:hola@luciano.im" class="email">hola@luciano.im</a></p>
 				<ul id="social">
-					<li><a class="pink" href="http://www.twitter.com/luciano_sds" title="Twitter"><i class="fa fa-twitter"></i></a></li><!--
+					<li><a class="pink" href="https://twitter.com/luciano_dev" title="Twitter"><i class="fa fa-twitter"></i></a></li><!--
 					--><li><a class="pink" href="http://www.facebook.com/luciano.munoz.3154" title="Facebook"><i class="fa fa-facebook"></i></a></li><!--
-					--><li><a class="pink" href="http://www.instagram.com/luciano_sds/" title="Instagram"><i class="fa fa-instagram"></i></a></li><!--
+					--><li><a class="pink" href="http://www.instagram.com/luciano.webdev/" title="Instagram"><i class="fa fa-instagram"></i></a></li><!--
 					--><li><a class="pink" href="https://ar.linkedin.com/in/luciano-muñoz-94b7a19b" title="LinkedIn"><i class="fa fa-linkedin"></i></a></li><!--
 					--><li><a class="pink" href="https://github.com/luchisds" title="GitHub"><i class="fa fa-github-alt"></i></a></li>
 				</ul>
