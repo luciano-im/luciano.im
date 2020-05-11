@@ -1,0 +1,21 @@
+{{!< default}}
+
+<div class="container">
+    {{#post}}
+		{{> post-content}}
+		
+		<div class="comments">
+    		<h2>Comments</h2>
+    		<div id="disqus_thread"></div>
+		</div>
+		<script>
+		    DISQUS.reset({
+              reload: true,
+              config: function () {  
+                this.page.identifier = "{{post_class}}";  
+                this.page.url = "{{@blog.url}}/#!newthread";
+              }
+            });
+		</script>
+    {{/post}}
+</div>

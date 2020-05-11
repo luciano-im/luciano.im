@@ -1,0 +1,17 @@
+{{!< default}}
+{{#post}}
+    <div class="c-post-view {{post_class}}">
+        <div class="c-post-view__header">
+            <h1 class="c-post-view__header__title">{{title}}</h1>
+            {{> "post-meta"}}
+        </div>
+
+        <div class="c-post-view__content">
+            {{content}}
+        </div>
+
+        <div class="c-post-view__footer">
+            {{> "post-meta"}}
+        </div>
+    </div>
+{{/post}}

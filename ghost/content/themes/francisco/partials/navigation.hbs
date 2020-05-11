@@ -1,0 +1,30 @@
+<nav id="mm-menu" class="mm-menu">
+    <div class="mm-menu__header">
+        <h2 class="mm-menu__title">{{@blog.title}}</h2>
+    </div>
+    
+    <ul class="mm-menu__items">
+        {{#foreach navigation}}
+        <li class="mm-menu__item">
+            <a class="js-ajax-link mm-menu__link" href="{{url}}">
+                <span class="mm-menu__link-text"><i class="fa fa-circle-thin"></i> {{label}}</span>
+            </a>
+        </li>
+        {{/foreach}}
+        <li class="mm-menu__item">
+            <a class="mm-menu__link" href="#">
+                <span class="mm-menu__link-text"><i class="fa fa-facebook-official"></i> Facebook</span>
+            </a>
+        </li>
+        <li class="mm-menu__item">
+            <a class="mm-menu__link" href="#">
+                <span class="mm-menu__link-text"><i class="fa fa-google-plus"></i> Google+</span>
+            </a>
+        </li>
+        <li class="mm-menu__item">
+            <a class="mm-menu__link" href="#">
+                <span class="mm-menu__link-text"><i class="fa fa-twitter"></i> Twitter</span>
+            </a>
+        </li>
+    </ul>
+</nav>

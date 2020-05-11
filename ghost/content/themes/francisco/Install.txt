@@ -1,0 +1,6 @@
+Step 1: Upload your theme (guide: http://www.ghostforbeginners.com/how-to-upload-a-theme/).
+Step 2: Change your theme in ghost dashboard.
+Step 3: Up load your cover & logo.
+Step 4: Customized if you like.
+
+Good luck!.
