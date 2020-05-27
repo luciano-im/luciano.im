@@ -1,0 +1,71 @@
+/**
+ * 
+ * Main structure.
+ * 
+**/
+
+* {@include box-sizing(border-box);}
+
+body, html {overflow-x:hidden; width:100%; height:100%}
+
+body {
+    background:$background-main; position:relative;
+    &.nav-open {margin-left:15.75em}
+
+    @include single-transition(margin, .5s, ease)
+}
+
+.wrapper {
+    width:100%; margin:0 auto; padding:0 1em; position:relative; 
+    @extend .clearfix;
+}
+.main-holder {height:100%}
+#main-content {position:relative; height:100%}
+
+#main {
+    //padding:0 3.75em; margin-left:25%;
+    padding:0; margin-left:25%;
+    
+    a {color:$text-color-link}
+}
+
+
+
+.post {
+    margin-top:6.25em;
+    padding:0 3.75em;
+    
+    &:first-of-type {margin-top:3.75em}
+    &:last-of-type {padding-bottom:3.75em}
+
+    img {@extend pre}
+}
+
+    .post-header {margin-bottom:2.125em; overflow:hidden}
+
+    .post-meta {font-size:.6875em; color:$text-color-grey; text-transform:uppercase}
+        .post-meta-data {
+            padding-right:2.25em;
+            @extend .pull-left;
+
+            [class*="icon-"] {font-size:1.5em; color:$text-color-main; vertical-align:middle; margin:-2px 3px 0 0}
+            
+            &:last-of-type {padding:0; @extend .pull-right}
+            &:only-of-type {padding:0; float:left !important}
+        }
+
+.post-content{
+    .post-image{display:block; /*width:60%;*/ margin: 0 auto 2.125em auto;}
+}
+
+#disqus_thread{
+    background-color:#eaeaea;
+    padding:1.5em 3.75em 0 3.75em;
+}
+
+.pagination {
+    padding-top:.5em;
+    
+    .older-posts {float:right}
+    .newer-posts {float:left}
+}

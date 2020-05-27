@@ -75,3 +75,8 @@ Thumbs.db
 
 # Directory #
 ###########
+
+# Ghost #
+###########
+/ghost/config.js
+/ghost/config.example.js

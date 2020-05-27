@@ -1,0 +1,22 @@
+{{#foreach posts}}
+    <article class="{{post_class}}" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+        
+        <header class="post-header">
+            <h2 class="post-title" itemprop="name headline">
+                <a class="js-ajax-link" href="{{url}}">{{{title}}}</a>
+            </h2>
+            <span class="post-meta">
+                <i class="fa fa-clock-o"></i> <time datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMM YYYY"}}</time> {{#if tags}}on {{tags}}{{/if}}
+            </span>
+        </header>
+        
+        <section class="post-excerpt">
+            <p>{{excerpt words="35"}}</p>
+        </section>
+        
+        <section class="post-footer" itemprop="author">
+            {{#if author.image}}<img class="author_image" src="{{author.image}}" alt="{{author.name}}">{{/if}} {{author}}
+        </section>
+        
+    </article>
+{{/foreach}}
