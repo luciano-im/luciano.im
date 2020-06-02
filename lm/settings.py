@@ -12,6 +12,9 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/1.9/ref/settings/
 """
 
+from dotenv import load_dotenv
+load_dotenv()
+
 import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -22,13 +25,12 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/1.9/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-with open(BASE_DIR+'/lm/secret_key.txt') as f:
-    SECRET_KEY = f.read().strip()
+SECRET_KEY = os.getenv('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = os.getenv('DEBUG')
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost','luciano.im']
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost','www.luciano.im', 'luciano.im']
 
 ADMINS = [('Luciano Muñoz', 'hola@luciano.im'),]
 MANAGERS = [('Luciano Muñoz', 'hola@luciano.im'),]
@@ -43,6 +45,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'anymail',
     'website',
 ]
 
@@ -136,14 +139,14 @@ STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
 )
 
-# EMAIL Configuration
-with open(BASE_DIR+'/lm/email_account.txt') as f:
-    ea = f.read().strip().split(':')
-    EMAIL_USE_TLS = True
-    EMAIL_HOST = ea[0]
-    EMAIL_HOST_PASSWORD = ea[3]
-    EMAIL_HOST_USER = ea[2]
-    EMAIL_PORT = ea[1]
+# AnyMail
+ANYMAIL = {
+    'MAILGUN_API_KEY': os.getenv('MAILGUN_API_KEY'),
+    'MAILGUN_SENDER_DOMAIN': os.getenv('MAILGUN_SENDER_DOMAIN'),
+}
+EMAIL_BACKEND = 'anymail.backends.mailgun.EmailBackend'
+DEFAULT_FROM_EMAIL = os.getenv('ANYMAIL_DEFAULT_FROM_EMAIL')
+SERVER_EMAIL = os.getenv('ANYMAIL_SERVER_EMAIL')
 
 # Security Settings
 SECURE_CONTENT_TYPE_NOSNIFF = True
