@@ -1,7 +1,8 @@
 from django.views.generic.edit import FormView
 from website.forms import ContactForm
-# from django.core.mail import send_mail
 from django.core.mail import EmailMessage
+from django.core.mail import BadHeaderError
+import smtplib
 
 class IndexView(FormView):
     template_name = 'index.html'
@@ -13,17 +14,19 @@ class IndexView(FormView):
         subject = form.cleaned_data.get('subject')
         message = form.cleaned_data.get('message')
 
-        content = "{0} quiere contactarte: ".format(form.cleaned_data.get('email'))
-        content += "\n\n Asunto: {0}".format(form.cleaned_data.get('subject'))
-        content += "\n\n Mensaje: {0}".format(form.cleaned_data.get('message'))
+        content = f'{email} quiere contactarte: '
+        content += f'\n\n Asunto: {subject}'
+        content += f'\n\n Mensaje: {message}'
 
-        email_message = EmailMessage(
-            'Mensaje de Luciano.im',
-            content,
-            'El Grillo <hola@luciano.im>',
-            ['hola@luciano.im'],
-            reply_to=[email]
-        )
-        email_message.send()
+        email_subject = 'Mensaje de Luciano.im'
+        to_email = 'hola@luciano.im'
+        
+        try:
+            mail = EmailMessage(email_subject, content, to=[to_email], from_email=email, reply_to=[email])
+            mail.send()
+        except BadHeaderError:
+            print('Invalid header found.')
+        except smtplib.SMTPException:
+            print('Error: Unable to send email')
 
         return super(IndexView, self).form_valid(form)
