@@ -49,7 +49,7 @@
     "jsonpath": "0.2.2",
     "knex": "0.10.0",
     "lodash": "3.10.1",
-    "moment": "2.11.2",
+    "moment": "2.19.3",
     "morgan": "1.6.1",
     "multer": "1.1.0",
     "node-uuid": "1.4.7",
